@@ -29,7 +29,7 @@ class StrToBcmath {
      * @param $scale    // 精度
      * @param $isRecursive  // 是否递归，递归时不输出计算过程
      */
-    public function main($expression, $scale = '', $isRecursive = false) {
+    public function of($expression, $scale = '', $isRecursive = false) {
         $scale = $scale ?: $this->scale;
 
         // 原始表达式
@@ -45,9 +45,9 @@ class StrToBcmath {
         // 使用正则表达式匹配表达式中的括号
         while (preg_match('/\(([^\(\)]+)\)/', $expression, $matches)) {
             // 计算括号中的表达式
-            $main = $this->main($matches[1], $scale, true);
+            $res = $this->of($matches[1], $scale, true);
             // 将没有括号的表达式替换到原表达式中
-            $expression = str_replace('(' . $matches[1] . ')', $main, $expression);
+            $expression = str_replace('(' . $matches[1] . ')', $res, $expression);
             if ($this->isecho) {
                 echo '=' . $expression . '<br/>';
             }
@@ -55,8 +55,8 @@ class StrToBcmath {
 
         // 处理指数运算
         while (preg_match('/(\d+(\.\d+)?)(\*\*)(\d+(\.\d+)?)/', $expression, $matches)) {
-            $main       = $this->basic($matches[0], $scale);
-            $expression = str_replace($matches[0], $main, $expression);
+            $res        = $this->basic($matches[0], $scale);
+            $expression = str_replace($matches[0], $res, $expression);
             if (!$isRecursive && $this->isecho) {
                 echo '=' . $expression . '<br/>';
             }
@@ -64,16 +64,16 @@ class StrToBcmath {
 
         // 处理乘法、除法
         while (preg_match('/(\d+(\.\d+)?)([\/*])(\d+(\.\d+)?)/', $expression, $matches)) {
-            $main       = $this->basic($matches[0], $scale);
-            $expression = str_replace($matches[0], $main, $expression);
+            $res        = $this->basic($matches[0], $scale);
+            $expression = str_replace($matches[0], $res, $expression);
             if (!$isRecursive && $this->isecho) {
                 echo '=' . $expression . '<br/>';
             }
         }
         // 处理加法和减法
         while (preg_match('/(-?\d+(\.\d+)?)([+\-])(-?\d+(\.\d+)?)/', $expression, $matches)) {
-            $main       = $this->basic($matches[0], $scale);
-            $expression = str_replace($matches[0], $main, $expression);
+            $res        = $this->basic($matches[0], $scale);
+            $expression = str_replace($matches[0], $res, $expression);
             if (!$isRecursive && $this->isecho) {
                 echo '=' . $expression . '<br/>';
             }

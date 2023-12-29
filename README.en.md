@@ -23,13 +23,13 @@ require_once 'StrToBcmath.php';
 ```php
 @param $scale // Optional, Accuracy, Default: 8
 @param $isecho // Optional, whether to output the calculation process, default value: false
-$bcmath = new StrToBcmath();
+$math = new StrToBcmath();
 ```
 
-2. Then, use the main method to calculate the result of the expression.
+2. Then, use the of method to calculate the result of the expression.
 
 ```php
-$result = $bcmath->main('(((2.5-3.5)+8)**(5-1)+6)/2');
+$result = $math->of('(((2.5-3.5)+8)**(5-1)+6)/2');
 // a**b represents a to the power of b
 echo $result;   // 1203.50000000
 ```
@@ -59,7 +59,7 @@ $expressions = [
 
 Evaluates the result of each expression
 foreach ($expressions as $expression) {
-    $result = (new StrToBcmath(6, true))->main($expression) * 1;
+    $result = (new StrToBcmath(6, true))->of($expression) * 1;
     echo "$expression = $result<br/><br/>";
 }
 ```

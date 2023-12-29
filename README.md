@@ -23,13 +23,13 @@ require_once 'StrToBcmath.php';
 ```php
 // @param $scale    // 可选，精度，默认值：8
 // @param $isecho   // 可选，是否输出计算过程，默认值：false
-$bcmath = new StrToBcmath();
+$math = new StrToBcmath();
 ```
 
-2.  然后，使用 main 方法计算表达式的结果。
+2.  然后，使用 of 方法计算表达式的结果。
 
 ```php
-$result = $bcmath->main('(((2.5-3.5)+8)**(5-1)+6)/2');
+$result = $math->of('(((2.5-3.5)+8)**(5-1)+6)/2');
 // a**b 表示a的b次方
 echo $result;   // 1203.50000000
 ```
@@ -59,7 +59,7 @@ $expressions = [
 
 // 计算每个表达式的结果
 foreach ($expressions as $expression) {
-    $result = (new StrToBcmath(6, true))->main($expression) * 1;
+    $result = (new StrToBcmath(6, true))->of($expression) * 1;
     echo "$expression = $result<br/><br/>";
 }
 ```
