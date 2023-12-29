@@ -1,6 +1,6 @@
 <?php
 
-namespace Km;
+namespace k6xiao;
 
 // 字符串转BcMath计算结果
 class StrToBcmath {

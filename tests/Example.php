@@ -1,8 +1,8 @@
 <?php
 
-namespace Km\Tests;
+namespace k6xiao\Tests;
 
-use Km\StrToBcmath;
+use k6xiao\StrToBcmath;
 
 class Example {
     public function test1() {
