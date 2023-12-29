@@ -18,7 +18,7 @@ require_once 'StrToBcmath.php';
 You can also use 'composer require k6xiao/strtobcmath' to install this library,
 Then use 'use k6xiaoStrToBcmath;' to ingest the library.
 
-#### Instructions for use
+#### Installation
 
 1. First, create a StrToBcmath object. You can set the precision and whether or not to output the calculation process when you create the object.
 
