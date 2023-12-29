@@ -1,1 +1,4 @@
-/vendor/
+/.gitee
+/.git
+composer.lock
+/vendor
