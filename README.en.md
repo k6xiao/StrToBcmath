@@ -30,6 +30,7 @@ $bcmath = new StrToBcmath();
 
 ```php
 $result = $bcmath->main('(((2.5-3.5)+8)*(2.5-1)+6)/2');
+echo $result;   // 8.25000000
 ```
 
 #### example
