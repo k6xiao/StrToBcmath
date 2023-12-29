@@ -16,6 +16,8 @@ StrToBcmath 是一个 PHP 类，用于将字符串表达式转换为 BcMath 计�
 require_once 'StrToBcmath.php';
 ```
 
+使用 `composer require km/str-to-bcmath` 来安装这个库。
+
 #### 使用说明
 
 1.  首先，创建一个 StrToBcmath 对象。你可以在创建对象时设置精度和是否输出计算过程。
