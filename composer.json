@@ -8,6 +8,11 @@
             "Km\\": "src/"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "Km\\Tests\\": "tests/"
+        }
+    },
     "authors": [
         {
             "name": "k6xiao",
