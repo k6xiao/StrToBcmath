@@ -29,8 +29,9 @@ $bcmath = new StrToBcmath();
 2.  然后，使用 main 方法计算表达式的结果。
 
 ```php
-$result = $bcmath->main('(((2.5-3.5)+8)*(2.5-1)+6)/2');
-echo $result;   // 8.25000000
+$result = $bcmath->main('(((2.5-3.5)+8)**(5-1)+6)/2');
+// a**b 表示a的b次方
+echo $result;   // 1203.50000000
 ```
 
 #### 示例

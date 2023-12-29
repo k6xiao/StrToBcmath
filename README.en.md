@@ -29,8 +29,9 @@ $bcmath = new StrToBcmath();
 2. Then, use the main method to calculate the result of the expression.
 
 ```php
-$result = $bcmath->main('(((2.5-3.5)+8)*(2.5-1)+6)/2');
-echo $result;   // 8.25000000
+$result = $bcmath->main('(((2.5-3.5)+8)**(5-1)+6)/2');
+// a**b represents a to the power of b
+echo $result;   // 1203.50000000
 ```
 
 #### example

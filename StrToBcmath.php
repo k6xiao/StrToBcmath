@@ -111,13 +111,20 @@ class StrToBcmath {
                 return bcmul($a, $b, $scale);
             case '/':
                 if ($b == 0) {
-                    throw new \InvalidArgumentException('除数不能为零');
+                    throw new \InvalidArgumentException('除数不能为零：' . $a . $operator . $b);
                 }
                 return bcdiv($a, $b, $scale);
             case '**':
+                if (strpos($b, '.') !== false) {
+                    if ((int) $b == $b) {
+                        $b = (int) $b;
+                    } else {
+                        throw new \InvalidArgumentException('指数不能为小数：' . $a . $operator . $b);
+                    }
+                }
                 return bcpow($a, $b, $scale);
             default:
-                throw new \InvalidArgumentException('未知的运算符：' . $operator);
+                throw new \InvalidArgumentException('未知的运算符：' . $a . $operator . $b);
             }
         } catch (\Exception $e) {
             throw new \InvalidArgumentException($e->getMessage());
