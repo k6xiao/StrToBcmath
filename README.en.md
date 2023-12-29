@@ -1,7 +1,12 @@
 # StrToBcmath
 
 #### Description
+
 StrToBcmath is a PHP class that converts string expressions into BcMath evaluations. It supports complex "addition, subtraction, multiplication, division, exponential" operations and supports parenthesis precedence.
+
+#### Why use this library?
+
+For calculations that require precise results, we usually choose to use BcMath to avoid errors caused by decimals. However, for complex calculations, the expression of BcMath may not be intuitive and easy to read. By using this library, you can convert intuitive and easy-to-read operation expressions into BcMath calculation results. In this way, you can not only ensure the accuracy of the results, but also maintain a high readability of the code, save time in writing code, and avoid possible errors when writing BcMath.
 
 #### Software Architecture
 
