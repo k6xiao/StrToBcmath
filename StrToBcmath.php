@@ -97,7 +97,7 @@ class StrToBcmath {
         // 根据运算符调用对应的 bcmath 函数
         $operator = $matches[3];
         $a        = strval($matches[1]);
-        $b        = $matches[5];
+        $b        = strval($matches[5]);
         // if ($this->isecho) {
         //     echo '【处理运算符】' . $a . $operator . $b . '<br/>';
         // }
