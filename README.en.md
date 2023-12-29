@@ -8,7 +8,7 @@ StrToBcmath is a PHP class that converts string expressions into BcMath evaluati
 
 For calculations that require precise results, we usually choose to use BcMath to avoid errors caused by decimals. However, for complex calculations, the expression of BcMath may not be intuitive and easy to read. By using this library, you can convert intuitive and easy-to-read operation expressions into BcMath calculation results. In this way, you can not only ensure the accuracy of the results, but also maintain a high readability of the code, save time in writing code, and avoid possible errors when writing BcMath.
 
-#### Software Architecture
+#### Installation
 
 Copy the StrToBcmath.php file into your project and bring it in where you need to use it.
 
@@ -18,7 +18,7 @@ require_once 'StrToBcmath.php';
 You can also use 'composer require k6xiao/strtobcmath' to install this library,
 Then use 'use k6xiaoStrToBcmath;' to ingest the library.
 
-#### Installation
+#### Directions for use
 
 1. First, create a StrToBcmath object. You can set the precision and whether or not to output the calculation process when you create the object.
 
