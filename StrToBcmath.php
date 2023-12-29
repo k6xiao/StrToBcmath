@@ -10,13 +10,13 @@ class StrToBcmath {
     private $scale; // 精度
 
     /**
-     * @var mixed   // 是否显示计算过程
+     * @var mixed   // 是否输出计算过程
      */
     private $isecho;
 
     /**
-     * @param $scale    // 精度
-     * @param $isecho   // 是否显示计算过程
+     * @param $scale    // 可选，精度，默认值：8
+     * @param $isecho   // 可选，是否输出计算过程，默认值：false
      */
     public function __construct($scale = 8, $isecho = false) {
         $this->scale  = $scale;
