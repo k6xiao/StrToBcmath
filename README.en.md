@@ -15,14 +15,16 @@ Copy the StrToBcmath.php file into your project and bring it in where you need t
 ```php
 require_once 'StrToBcmath.php';
 ```
+You can also use 'composer require k6xiao/strtobcmath' to install this library,
+Then use 'use k6xiaoStrToBcmath;' to ingest the library.
 
 #### Instructions for use
 
 1. First, create a StrToBcmath object. You can set the precision and whether or not to output the calculation process when you create the object.
 
 ```php
-@param $scale // Optional, Accuracy, Default: 8
-@param $isecho // Optional, whether to output the calculation process, default value: false
+// @param $scale // Optional, Accuracy, Default: 8
+// @param $isecho // Optional, whether to output the calculation process, default value: false
 $math = new StrToBcmath();
 ```
 
@@ -41,7 +43,7 @@ Here are some examples of using StrToBcmath:
 ```php
 require_once 'StrToBcmath.php';
 
-Define some expressions
+// Define some expressions
 $expressions = [
     '2*3+6+6/2',
     '2/3',
@@ -57,7 +59,7 @@ $expressions = [
     '(((2.5-3.5)+8)*(2.5-1)+6)/2',
 ];
 
-Evaluates the result of each expression
+// Evaluates the result of each expression
 foreach ($expressions as $expression) {
     $result = (new StrToBcmath(6, true))->of($expression) * 1;
     echo "$expression = $result<br/><br/>";
@@ -130,6 +132,13 @@ This will output the evaluation process and results for each expression:
 #### Note
 
 The StrToBcmath class uses the PHP bcmath library for computation, so your PHP environment needs to support the bcmath library.
+
+#### Project source code
+
+You can find the source code of our project at:
+
+- GitHub：[https://github.com/k6xiao/StrToBcmath.git](https://github.com/k6xiao/StrToBcmath.git)
+- Gitee：[https://gitee.com/crazy-dream/StrToBcmath.git](https://gitee.com/crazy-dream/StrToBcmath.git)
 
 #### Contribute to the mix
 
