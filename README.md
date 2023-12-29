@@ -134,6 +134,13 @@ foreach ($expressions as $expression) {
 
 StrToBcmath 类使用 PHP 的 bcmath 库进行计算，所以你的 PHP 环境需要支持 bcmath 库。
 
+#### 项目源代码
+
+你可以在以下地址找到我们的项目源代码：
+
+- GitHub：[https://github.com/k6xiao/StrToBcmath.git](https://github.com/k6xiao/StrToBcmath.git)
+- Gitee：[https://gitee.com/crazy-dream/StrToBcmath.git](https://gitee.com/crazy-dream/StrToBcmath.git)
+
 #### 参与贡献
 
 1.  Fork 本仓库
