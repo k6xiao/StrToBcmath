@@ -46,7 +46,8 @@ echo $result;   // 1203.50000000
 $money = 123.456;
 $sxf   = 0.6;
 $fee   = (new StrToBcmath(6))->of("{$money}*{$sxf}/100");
-echo "{$money}的{$sxf}%手续费是：{$fee}";
+echo "{$money} 的 {$sxf}% 手续费是：{$fee}";
+// 123.456 的 0.6% 手续费是：0.740736
 ```
 
 ```php
