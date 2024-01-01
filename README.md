@@ -65,6 +65,11 @@ foreach ($expressions as $expression) {
     $result = (new StrToBcmath(6, true))->of($expression) * 1;
     echo "$expression = $result<br/><br/>";
 }
+
+$money = 123.456;
+$sxf   = 0.6;
+$fee   = (new StrToBcmath(6))->of("{$money}*{$sxf}/100");
+echo "{$money}的{$sxf}%手续费是：{$fee}";
 ```
 
 这将输出每个表达式的计算过程和结果：

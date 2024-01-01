@@ -15,8 +15,8 @@ class Example {
     public function test2() {
         $money = 123.456;
         $sxf   = 0.6;
-        $fee   = (new StrToBcmath(6, true))->of("{$money}*{$sxf}/100");
-        echo $fee;
+        $fee   = (new StrToBcmath(6))->of("{$money}*{$sxf}/100");
+        echo "{$money}的{$sxf}%手续费是：{$fee}";
     }
 
     public function test3() {
