@@ -37,6 +37,11 @@ class StrToBcmath {
             echo $expression . '<br/>';
         }
 
+        // 去除空格
+        if (!$isRecursive) {
+            $expression = str_replace(' ', '', $expression);
+        }
+
         // 如果输入的表达式为空或者包含非法字符，则抛出异常
         if (empty($expression) || preg_match('/[^0-9\.\+\-\*\/\(\)]/', $expression)) {
             throw new \InvalidArgumentException('表达式错误，仅支持+,-,*,/,**,(),数字：' . $expression);
