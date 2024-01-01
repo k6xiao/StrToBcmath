@@ -66,6 +66,7 @@ foreach ($expressions as $expression) {
     echo "$expression = $result<br/><br/>";
 }
 
+// 使用书写案例
 $money = 123.456;
 $sxf   = 0.6;
 $fee   = (new StrToBcmath(6))->of("{$money}*{$sxf}/100");
