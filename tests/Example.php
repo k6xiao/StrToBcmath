@@ -13,6 +13,13 @@ class Example {
     }
 
     public function test2() {
+        $money = 123.456;
+        $sxf   = 0.6;
+        $fee   = (new StrToBcmath(6, true))->of("{$money}*{$sxf}/100");
+        echo $fee;
+    }
+
+    public function test3() {
         // 定义一些表达式
         $expressions = [
             '2*3+6+6/2',
