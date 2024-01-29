@@ -155,3 +155,4 @@ StrToBcmath 类使用 PHP 的 bcmath 库进行计算，所以你的 PHP 环境�
 
 1.  增加取余运算：$num1 % $num2 ~~~ fmod(float $num1, float $num2)
 2.  建立讨论组，与有兴趣的伙伴一起维护、计划
+3.  对于乘法表达式（*）：兼容‘x’号、省略‘*’号的优化。
