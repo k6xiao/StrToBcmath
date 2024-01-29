@@ -149,10 +149,9 @@ StrToBcmath 类使用 PHP 的 bcmath 库进行计算，所以你的 PHP 环境�
 
 - GitHub：[https://github.com/k6xiao/StrToBcmath.git](https://github.com/k6xiao/StrToBcmath.git)
 - Gitee：[https://gitee.com/crazy-dream/StrToBcmath.git](https://gitee.com/crazy-dream/StrToBcmath.git)
+- Composer：[https://packagist.org/packages/k6xiao/strtobcmath](https://packagist.org/packages/k6xiao/strtobcmath)
 
-#### 参与贡献
+#### 项目计划
 
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
+1.  增加取余运算：$num1 % $num2 ~~~ fmod(float $num1, float $num2)
+2.  建立讨论组，与有兴趣的伙伴一起维护、计划
