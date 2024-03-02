@@ -42,4 +42,13 @@ class Example {
             echo "$expression = $result<br/><br/>";
         }
     }
+
+    public function test4() {
+        $math = new StrToBcmath();
+        $demo = [
+            'price' => 100, // 价格
+            'per'   => 10, // 百分比
+        ];
+        $math->of($demo['price'] . '*' . $demo['per'] . '/100');
+    }
 }
